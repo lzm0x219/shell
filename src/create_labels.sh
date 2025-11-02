@@ -101,6 +101,7 @@ for LABEL in "${LABELS[@]}"; do
   # 创建标签
   echo "正在创建标签: $NAME (颜色: $COLOR, 描述: $DESCRIPTION)"
   gh label create "$NAME" \
+    --force \
     --color "$COLOR" \
     --description "$DESCRIPTION" \
     --repo "$REPO" || echo "创建标签失败: $NAME"
